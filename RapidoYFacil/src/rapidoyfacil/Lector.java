@@ -85,6 +85,9 @@ public class Lector {
                 }
             }while(linea.compareTo(">") != 0);
             
+            p = new Personaje(nombre, arquetipo, ocupacion
+                , experiencia, nivel, historia, fuerza, resistencia, destreza
+                , inteligencia, percepcion, habilidades, armas, items);
         }catch(IOException e){
             System.out.println("Error: " + e.getMessage());
         }
