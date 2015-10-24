@@ -15,4 +15,10 @@ public class Arma {
         this.bonificadora = bonificadora;
         this.penalizadora = penalizadora;
     }
+    
+    @Override
+    public String toString(){
+        return nombre + "\n\tBonificacion: " + bonificadora + "\n\tPenalización: " 
+            + penalizadora; 
+    }
 }

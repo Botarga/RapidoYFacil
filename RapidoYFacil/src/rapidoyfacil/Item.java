@@ -17,4 +17,9 @@ public class Item {
         this.nombre = nombre;
         this.cantidad = cantidad;
     }
+    
+    @Override
+    public String toString(){
+        return nombre + ": " + cantidad;
+    }
 }

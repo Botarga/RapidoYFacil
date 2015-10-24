@@ -44,4 +44,33 @@ public class Personaje {
         this.armas = armas;
         this.items = items;
     }
+    
+    public void showInfo(){
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Arquetipo: " + arquetipo);
+        System.out.println("Ocupacion " + ocupacion);
+        System.out.println("Experiencia: " + experiencia);
+        System.out.println("Nivel: " + nivel);
+        
+        System.out.println("Historia");
+        System.out.println(historia);
+        
+        System.out.println("Atributos:");
+        System.out.println("\tFuerza:  " + fuerza);
+        System.out.println("\tResistencia: " + resistencia);
+        System.out.println("\tDestreza: " + destreza);
+        System.out.println("\tIntelifencia: " + inteligencia);
+        System.out.println("\tPercepcion: " + percepcion);
+        
+        System.out.println("Habilidades");
+        for(Habilidad h : habilidades)
+            System.out.println(h);
+        System.out.println("Arma");
+        for(Arma a : armas){
+            System.out.println(a);
+        }
+        for(Item i : items){
+            System.out.println(i);
+        }
+    }
 }

@@ -14,4 +14,9 @@ public class Habilidad {
         this.atributo = atributo;
         this.valor = valor;
     }
+    
+    @Override
+    public String toString(){
+        return nombre + "(" + atributo + "): " + valor;
+    }
 }
