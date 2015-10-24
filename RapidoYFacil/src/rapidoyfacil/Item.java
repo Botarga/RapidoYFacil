@@ -9,6 +9,12 @@ package rapidoyfacil;
  *
  * @author botarga
  */
-public class Items {
+public class Item {
+    private String nombre;
+    private int cantidad;
     
+    public Item(String nombre, int cantidad){
+        this.nombre = nombre;
+        this.cantidad = cantidad;
+    }
 }

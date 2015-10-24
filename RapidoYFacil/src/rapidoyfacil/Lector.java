@@ -81,8 +81,7 @@ public class Lector {
                 linea = bf.readLine();
                 if(linea.compareTo(">") != 0){
                     data = linea.split(";");
-                    equipo.add(new Habilidad(data[0], data[1]
-                        , Integer.parseInt(data[2])));
+                    items.add(new Item(data[0], Integer.parseInt(data[1])));
                 }
             }while(linea.compareTo(">") != 0);
             
