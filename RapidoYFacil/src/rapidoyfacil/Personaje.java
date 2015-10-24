@@ -19,7 +19,7 @@ public class Personaje {
     private int resistencia;
     private int destreza;
     private int inteligencia;
-    private int precepcion;
+    private int percepcion;
     
     List<Habilidad> habilidades;
     List<Arma> armas;
