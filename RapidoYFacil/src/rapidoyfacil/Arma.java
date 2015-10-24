@@ -9,4 +9,10 @@ public class Arma {
     private Habilidad bonificadora;
     private Habilidad penalizadora;
     
+    
+    public Arma (String nombre, Habilidad bonificadora, Habilidad penalizadora){
+        this.nombre = nombre;
+        this.bonificadora = bonificadora;
+        this.penalizadora = penalizadora;
+    }
 }

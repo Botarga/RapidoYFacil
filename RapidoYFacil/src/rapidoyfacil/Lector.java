@@ -11,6 +11,7 @@ public class Lector {
         Personaje p = null;
         List<Habilidad> habilidades = new ArrayList<>();
         List<Arma> armas = new ArrayList<>();
+        List<Item> items = new ArrayList<>();
         String linea;
         String data[];
         String nombre;
@@ -26,7 +27,7 @@ public class Lector {
         int inteligencia;
         int percepcion;
         
-        try(BufferedReader bf = new BufferedReader(new InputStreamReader(System.in))){
+        try(BufferedReader bf = new BufferedReader (new FileReader(path))){
             nombre = bf.readLine();
             arquetipo = bf.readLine();
             ocupacion = bf.readLine();
@@ -64,6 +65,26 @@ public class Lector {
                 }
             }while(linea.compareTo(">") != 0);
             
+            //Armas
+            do{
+                linea = bf.readLine();
+                if(linea.compareTo(">") != 0){
+                    data = linea.split(";");
+                    armas.add(new Arma(data[0], new Habilidad(data[1]
+                        , data[2], Integer.parseInt(data[3])), new Habilidad(data[4]
+                            , data[5], Integer.parseInt(data[6]))));
+                }
+            }while(linea.compareTo(">") != 0);
+            
+            //Equipo
+            do{
+                linea = bf.readLine();
+                if(linea.compareTo(">") != 0){
+                    data = linea.split(";");
+                    equipo.add(new Habilidad(data[0], data[1]
+                        , Integer.parseInt(data[2])));
+                }
+            }while(linea.compareTo(">") != 0);
             
         }catch(IOException e){
             System.out.println("Error: " + e.getMessage());

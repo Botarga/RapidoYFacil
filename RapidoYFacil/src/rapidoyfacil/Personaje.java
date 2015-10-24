@@ -23,4 +23,6 @@ public class Personaje {
     
     List<Habilidad> habilidades;
     List<Arma> armas;
+    List<Item> items;
+    
 }
